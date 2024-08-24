@@ -10,3 +10,15 @@
     :route="route('dashboard.index')"
 />
 @endsection
+
+
+@section('content')
+<div class="card card-height-100">
+    
+    
+    <div class="card-body">
+        <h5 class="card-title">Welcome To Dashboard</h5>
+    </div>
+
+</div>
+@endsection

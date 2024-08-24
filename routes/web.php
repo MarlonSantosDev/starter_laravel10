@@ -10,8 +10,8 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\MenuGroupController;
 use App\Http\Controllers\MenuItemController;
 use App\Http\Controllers\PelatihanController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +46,7 @@ Route::group(['middleware' => ['web', 'auth', 'verified']], function () {
     Route::resource('menu.item', MenuItemController::class)->only('index', 'store', 'update', 'destroy');
 
     Route::resource('pelatihan', PelatihanController::class)->only('index');
+
+
+    Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
 });
