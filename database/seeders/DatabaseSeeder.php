@@ -25,11 +25,11 @@ class DatabaseSeeder extends Seeder
 
 
         // Marlon
-        //$this->call(UserSeederTableSeeder::class);
-        //$this->call(PermissionManagementDatabaseSeeder::class);
-        //$this->call(SettingSeederTableSeeder::class);
-        //$this->call(MenuGeneralSeederTableSeeder::class);
-        //$this->call(MenuSettingSeederTableSeeder::class);
+        $this->call(UserSeederTableSeeder::class);
+        $this->call(PermissionManagementDatabaseSeeder::class);
+        $this->call(SettingSeederTableSeeder::class);
+        $this->call(MenuGeneralSeederTableSeeder::class);
+        $this->call(MenuSettingSeederTableSeeder::class);
         
 
     }
