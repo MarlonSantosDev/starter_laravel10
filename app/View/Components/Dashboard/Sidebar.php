@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\dashboard;
+namespace App\View\Components\Dashboard;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -29,6 +29,7 @@ class Sidebar extends Component
             ->where('status', true)
             ->orderBy('posision')
             ->get();
+            
         return view('components.dashboard.sidebar', compact('menus'));
     }
 }

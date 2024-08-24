@@ -9,8 +9,11 @@ class DashboardController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
+    public function index(){
+
+        //$user = auth()->user();
+        //dd($user->name);
+
         return view('dashboard.index');
     }
 

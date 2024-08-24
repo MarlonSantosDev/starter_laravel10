@@ -18,9 +18,19 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call(UserSeederTableSeeder::class);
 
-        $this->call(PermissionManagementDatabaseSeeder::class);
+        // Padrão
+        // $this->call(UserSeederTableSeeder::class);
+        // $this->call(PermissionManagementDatabaseSeeder::class);
+
+
+        // Marlon
+        //$this->call(UserSeederTableSeeder::class);
+        //$this->call(PermissionManagementDatabaseSeeder::class);
+        //$this->call(SettingSeederTableSeeder::class);
+        //$this->call(MenuGeneralSeederTableSeeder::class);
+        //$this->call(MenuSettingSeederTableSeeder::class);
+        
 
     }
 }

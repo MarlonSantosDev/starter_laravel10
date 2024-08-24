@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\dashboard;
+namespace App\View\Components\Dashboard;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -27,8 +27,9 @@ class Breadcrumb extends Component
     /**
      * Get the view / contents that represent the component.
      */
-    public function render()
-    {
+    public function render(){
+
+        
         return view('components.dashboard.breadcrumb', [
             'title' => $this->title,
             'page' => $this->page,

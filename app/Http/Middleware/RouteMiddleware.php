@@ -15,12 +15,13 @@ class RouteMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
-    {
+    public function handle(Request $request, Closure $next): Response{
+        
         $routes = Route::firstWhere('route', $request->route()?->getName());
 
         return blank($routes) || (bool) $routes->status && $request->user()->can($routes->permission_name)
             ? $next($request)
-            : redirect(RouteServiceProvider::HOME)->with('failed', 'you do not have access to this route!');
+            : redirect(RouteServiceProvider::HOME)->with('failed', 'você não tem acesso a esta rota!');
+            //: redirect(RouteServiceProvider::HOME)->with('failed', 'you do not have access to this route!');
     }
 }
